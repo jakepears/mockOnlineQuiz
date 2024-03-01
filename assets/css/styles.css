@@ -8,8 +8,11 @@
 }
 
 body {
-	font-family: Arial;
+	font-family: 'Inter', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
 	font-size: 120%;
+	font-variation-settings: 'slnt' 0;
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
 }
@@ -59,8 +62,8 @@ li:nth-child(odd) {
 	background-color: var(--fourth-color);
 }
 
-.wrapper {
-	margin: 100px auto 0 auto;
+.container {
+	margin: 6em auto 0 auto;
 	max-width: 35em;
 }
 
@@ -80,7 +83,7 @@ li:nth-child(odd) {
 
 .feedback {
 	font-style: italic;
-	font-size: 1205%;
+	font-size: 1000%;
 	margin-top: 1.5em;
 	padding-top: 1em;
 	color: gray;
