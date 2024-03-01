@@ -124,7 +124,7 @@ const saveScore = () => {
 
 		localStorage.setItem('highscores', JSON.stringify(highscores));
 
-		location.href = 'highscores.html';
+		location.href = 'assets/pages/scores.html';
 	}
 };
 
