@@ -1,10 +1,10 @@
 /** @format */
 
-const firstQuestion = 0;
-let time = questions.length * 20;
-let timerId;
+var questionIndex = 0;
+var time = questions.length * 20;
+var timerId;
 
-var questionsEl = document.getElementById('questions');
+const questionsEl = document.getElementById('questions');
 const timerEl = document.getElementById('time');
 const choicesEl = document.getElementById('choices');
 const submitBtn = document.getElementById('submit');
@@ -26,7 +26,7 @@ const quizStart = () => {
 };
 
 const questionFinder = () => {
-	let currentQuestion = questions[firstQuestion];
+	let currentQuestion = questions[questionIndex];
 
 	const titleEl = document.getElementById('question-title');
 
@@ -34,7 +34,7 @@ const questionFinder = () => {
 
 	choicesEl.innerHTML = '';
 
-	for (let i = 0; i < currentQuestion.length; i++) {
+	for (let i = 0; i < currentQuestion.choices.length; i++) {
 		// create new button for each choice
 		let choice = currentQuestion.choices[i];
 		let choiceNode = document.createElement('button');
@@ -50,11 +50,11 @@ const questionFinder = () => {
 const questionClick = (e) => {
 	const buttonEl = e.target;
 
-	if (!buttonEl.matches('.choices')) {
+	if (!buttonEl.matches('.choice')) {
 		return;
 	}
 
-	if (buttonEl.value !== questions[firstQuestion].answer) {
+	if (buttonEl.value !== questions[questionIndex].answer) {
 		time -= 10;
 
 		if (time < 0) {
@@ -72,9 +72,9 @@ const questionClick = (e) => {
 		feedbackEl.setAttribute('class, feedback hide');
 	}, 2000);
 
-	firstQuestion++;
+	questionIndex++;
 
-	if (time <= 0 || firstQuestion === questions.length) {
+	if (time <= 0 || questionIndex === questions.length) {
 		stopQuiz();
 	} else {
 		questionFinder();
@@ -132,6 +132,6 @@ submitBtn.onclick = saveScore;
 
 startBtn.onclick = quizStart;
 
-choicesEl.onclick = questionFinder;
+choicesEl.onclick = questionClick;
 
 initialsEl.onkeyup = submission;

@@ -10,7 +10,7 @@ var questions = [
 	{
 		title: 'A loop that never ends is referred to as a(n)_________.',
 		choices: ['For loop', 'Infinite loop', 'While loop', 'Recursive loop'],
-		answer: 'parentheses',
+		answer: 'Infinite loop',
 	},
 	{
 		title: 'Which of the following is not a valid JavaScript variable name?',
