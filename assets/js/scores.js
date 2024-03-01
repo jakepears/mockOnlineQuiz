@@ -17,4 +17,9 @@ const showScores = () => {
 
 document.getElementById('clear').onclick = clearHighscores;
 
-printHighscores();
+function clearSscores() {
+	localStorage.removeItem('scores');
+	location.reload();
+}
+
+saveScore();

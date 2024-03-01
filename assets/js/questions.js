@@ -1,36 +1,37 @@
 /** @format */
 
-const questions = [
+var questions = [
 	{
-		title: 'Commonly used data types DO NOT include:',
-		choices: ['strings', 'booleans', 'alerts', 'numbers'],
-		answer: 'alerts',
+		title:
+			'_____ is the process of finding errors and fixing them within a program',
+		choices: ['Compiling', 'Executing', 'Debugging', 'Scanning'],
+		answer: 'Debugging',
 	},
 	{
-		title: 'The condition in an if / else statement is enclosed within ____.',
-		choices: ['quotes', 'curly brackets', 'parentheses', 'square brackets'],
+		title: 'A loop that never ends is referred to as a(n)_________.',
+		choices: ['For loop', 'Infinite loop', 'While loop', 'Recursive loop'],
 		answer: 'parentheses',
 	},
 	{
-		title: 'Arrays in JavaScript can be used to store ____.',
+		title: 'Which of the following is not a valid JavaScript variable name?',
 		choices: [
-			'numbers and strings',
-			'other arrays',
-			'booleans',
-			'all of the above',
+			'2names',
+			'_first_and_last_names',
+			'FirstAndLast',
+			'None of the above',
 		],
-		answer: 'all of the above',
+		answer: '2names',
 	},
 	{
 		title:
-			'String values must be enclosed within ____ when being assigned to variables.',
+			'String values use ________ around them to distinguish between variables and string literals.',
 		choices: ['commas', 'curly brackets', 'quotes', 'parentheses'],
 		answer: 'quotes',
 	},
 	{
 		title:
-			'A very useful tool used during development and debugging for printing content to the debugger is:',
-		choices: ['JavaScript', 'terminal / bash', 'for loops', 'console.log'],
-		answer: 'console.log',
+			'To see if two variables are equal in type and value in an if / else statement you would use ________.',
+		choices: ['==', '=', '!=', '==='],
+		answer: '===',
 	},
 ];

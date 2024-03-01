@@ -4,7 +4,7 @@ const firstQuestion = 0;
 let time = questions.length * 20;
 let timerId;
 
-const questionsEl = document.getElementById('questions');
+var questionsEl = document.getElementById('questions');
 const timerEl = document.getElementById('time');
 const choicesEl = document.getElementById('choices');
 const submitBtn = document.getElementById('submit');
@@ -13,7 +13,7 @@ const initialsEl = document.getElementById('initials');
 const feedbackEl = document.getElementById('feedback');
 
 const quizStart = () => {
-	const startScreenEl = document.getElementById('start-screen');
+	let startScreenEl = document.getElementById('start-screen');
 	startScreenEl.setAttribute('class', 'hide');
 
 	questionsEl.removeAttribute('class');
@@ -48,7 +48,7 @@ const questionFinder = () => {
 };
 
 const questionClick = (e) => {
-	let buttonEl = e.target;
+	const buttonEl = e.target;
 
 	if (!buttonEl.matches('.choices')) {
 		return;
@@ -122,7 +122,7 @@ const saveScore = () => {
 	}
 };
 
-const checkForEnter = (e) => {
+const submission = (e) => {
 	if (e.key === 'Enter') {
 		saveScore();
 	}
@@ -134,4 +134,4 @@ startBtn.onclick = quizStart;
 
 choicesEl.onclick = questionFinder;
 
-initialsEl.onkeyup = checkForEnter;
+initialsEl.onkeyup = submission;
