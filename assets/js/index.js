@@ -43,7 +43,7 @@ const questionFinder = () => {
 
 		choiceBtn.textContent = i + 1 + '. ' + choice;
 
-		choicesEl.appendChild(choiceNode);
+		choicesEl.appendChild(choiceBtn);
 	}
 };
 
@@ -68,7 +68,7 @@ const choiceClick = (e) => {
 		feedbackEl.textContent = 'Correct';
 	}
 
-	feedbackEl.setAttribute('class, feedback');
+	feedbackEl.setAttribute('class', 'feedback');
 	setTimeout(function () {
 		feedbackEl.setAttribute('class, feedback hide');
 	}, 2000);
@@ -109,14 +109,19 @@ const saveScore = () => {
 	let initials = initialsEl.value.trim();
 
 	if (initials !== '') {
-		const highscores = JSON.parse(localStorage.getItem('highscores'));
+		let highscores = JSON.parse(localStorage.getItem('highscores'));
 
 		const newScore = {
 			score: time,
 			initials: initials,
 		};
 
-		highscores.push(newScore);
+		if (highscores) {
+			highscores.push(newScore);
+		} else {
+			highscores = [newScore];
+		}
+
 		localStorage.setItem('highscores', JSON.stringify(highscores));
 
 		location.href = 'highscores.html';
