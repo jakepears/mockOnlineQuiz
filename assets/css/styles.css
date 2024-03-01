@@ -26,12 +26,12 @@ a:hover {
 
 button {
 	display: inline-block;
-	margin: 5px;
+	margin: 1rem;
 	cursor: pointer;
 	font-size: 100%;
 	background-color: var(--third-color);
-	border-radius: 5px;
-	padding: 2px 10px;
+	border-radius: 1rem;
+	padding: 1rem 1em;
 	color: white;
 	border: 0;
 	transition: all 0.3s ease-in-out;
@@ -46,7 +46,7 @@ button:hover {
 }
 
 ol {
-	max-height: 100em;
+	max-height: 25em;
 	overflow: auto;
 }
 
@@ -56,12 +56,12 @@ li {
 }
 
 li:nth-child(odd) {
-	background-color: #f3edfc;
+	background-color: var(--fourth-color);
 }
 
 .wrapper {
 	margin: 100px auto 0 auto;
-	max-width: 600px;
+	max-width: 35em;
 }
 
 .hide {
@@ -74,21 +74,21 @@ li:nth-child(odd) {
 
 .scores {
 	position: absolute;
-	top: 10px;
-	left: 10px;
+	top: 1em;
+	left: 1em;
 }
 
 .feedback {
 	font-style: italic;
-	font-size: 120%;
-	margin-top: 20px;
-	padding-top: 10px;
+	font-size: 1205%;
+	margin-top: 1.5em;
+	padding-top: 1em;
 	color: gray;
 	border-top: 2px solid #ccc;
 }
 
 .timer {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 1em;
+	right: 1em;
 }

@@ -47,7 +47,7 @@ const questionFinder = () => {
 	}
 };
 
-const questionClick = (e) => {
+const choiceClick = (e) => {
 	const buttonEl = e.target;
 
 	if (!buttonEl.matches('.choice')) {
@@ -55,11 +55,12 @@ const questionClick = (e) => {
 	}
 
 	if (buttonEl.value !== questions[questionIndex].answer) {
-		time -= 10;
+		time -= 20;
 
 		if (time < 0) {
 			time = 0;
 		}
+
 		timerEl.textContent = time;
 
 		feedbackEl.textContent = 'Incorrect';
@@ -128,7 +129,7 @@ const submission = (e) => {
 	}
 };
 
-submitBtn.onclick = saveScore;
 startBtn.onclick = quizStart;
-choicesEl.onclick = questionClick;
+choicesEl.onclick = choiceClick;
 initialsEl.onkeyup = submission;
+submitBtn.onclick = saveScore;
