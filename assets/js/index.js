@@ -129,9 +129,6 @@ const submission = (e) => {
 };
 
 submitBtn.onclick = saveScore;
-
 startBtn.onclick = quizStart;
-
 choicesEl.onclick = questionClick;
-
 initialsEl.onkeyup = submission;

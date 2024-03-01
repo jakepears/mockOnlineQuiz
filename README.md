@@ -11,8 +11,8 @@ This is a javascript application that takes advantage of Javascript's ability to
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Deployed Application](https://jakepears.github.io/mockOnlineQuiz/)
-- [Screenshot](./screenshots/deploymentSc.png)
+- [Deployed Application](#deployed-application)
+- [Screenshot](#screenshot)
 - [License](#license)
 
 ## Installation
@@ -29,7 +29,7 @@ The deployed application can be accessed by clicking on the following link: [Onl
 
 ## Screenshot
 
-![Online Quiz](./assests/screenshots/deploymentSc.png)
+![Online Quiz](./assets/screenshots/mockQuiz.png)
 
 ## License
 
